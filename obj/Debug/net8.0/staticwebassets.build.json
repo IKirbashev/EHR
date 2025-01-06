@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "w5iM3+0a7rXRtxsOHdVDo88q9b2I5LVFqWrbaUY61MI=",
+  "Source": "ElectronicHealthRecord",
+  "BasePath": "_content/ElectronicHealthRecord",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
