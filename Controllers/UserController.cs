@@ -1,4 +1,5 @@
 ﻿using ElectronicHealthRecord.Data;
+using ElectronicHealthRecord.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
