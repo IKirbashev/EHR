@@ -171,3 +171,4 @@ C:\Users\user\source\repos\ElectronicHealthRecord\ElectronicHealthRecord\obj\Deb
 C:\Users\user\source\repos\ElectronicHealthRecord\ElectronicHealthRecord\obj\Debug\net8.0\ElectronicHealthRecord.pdb
 C:\Users\user\source\repos\ElectronicHealthRecord\ElectronicHealthRecord\obj\Debug\net8.0\ElectronicHealthRecord.genruntimeconfig.cache
 C:\Users\user\source\repos\ElectronicHealthRecord\ElectronicHealthRecord\obj\Debug\net8.0\ref\ElectronicHealthRecord.dll
+C:\Users\user\source\repos\ElectronicHealthRecord\ElectronicHealthRecord\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

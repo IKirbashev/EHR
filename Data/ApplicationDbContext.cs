@@ -17,29 +17,50 @@ namespace ElectronicHealthRecord.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
+                .Property(u => u.Id)
+                .ValueGeneratedOnAdd();
+
+            // User - Biomarker
+            modelBuilder.Entity<User>()
                 .HasMany(u => u.Biomarkers)
                 .WithOne(b => b.User)
-                .HasForeignKey(b => b.UserId);
+                .HasForeignKey(b => b.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
+            // User - Medication
             modelBuilder.Entity<User>()
                 .HasMany(u => u.Medications)
                 .WithOne(m => m.User)
-                .HasForeignKey(m => m.UserId);
+                .HasForeignKey(m => m.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
+            // User - CalendarEvent
             modelBuilder.Entity<User>()
                 .HasMany(u => u.CalendarEvents)
                 .WithOne(e => e.User)
-                .HasForeignKey(e => e.UserId);
+                .HasForeignKey(e => e.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
+            // User - Folder
             modelBuilder.Entity<User>()
                 .HasMany(u => u.Folders)
                 .WithOne(f => f.User)
-                .HasForeignKey(f => f.UserId);
+                .HasForeignKey(f => f.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
+            // Folder - DiaryEntry
             modelBuilder.Entity<Folder>()
                 .HasMany(f => f.DiaryEntries)
                 .WithOne(d => d.Folder)
-                .HasForeignKey(d => d.FolderId);
+                .HasForeignKey(d => d.FolderId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // DiaryEntry - User
+            modelBuilder.Entity<DiaryEntry>()
+                .HasOne(d => d.User)
+                .WithMany(u => u.DiaryEntries)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             base.OnModelCreating(modelBuilder);
         }

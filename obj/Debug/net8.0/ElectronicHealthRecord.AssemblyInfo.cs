@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ElectronicHealthRecord")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1bb25c71bd36b773c95a687f2d3809a7479d88e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+befb2facaa1ead2144da5137629918875f2bad0c")]
 [assembly: System.Reflection.AssemblyProductAttribute("ElectronicHealthRecord")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ElectronicHealthRecord")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
