@@ -37,7 +37,7 @@ namespace ElectronicHealthRecord.Controllers
 
         // GET: api/User/{id}
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserDto>> GetUser(int id)
+        public async Task<ActionResult<UserDto>> GetUser(string id)
         {
             var user = await _context.Users
                 .Where(u => u.Id == id)
@@ -68,7 +68,7 @@ namespace ElectronicHealthRecord.Controllers
                 return BadRequest(new { Message = "User data is required." });
             }
 
-            // Проверка на уникальность e-mail
+            // Check if email is unique
             if (await _context.Users.AnyAsync(u => u.Email == createUserDto.Email))
             {
                 return Conflict(new { Message = "A user with the same email already exists." });
@@ -100,7 +100,7 @@ namespace ElectronicHealthRecord.Controllers
 
         // PUT: api/User/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateUser(int id, [FromBody] CreateUserDto updateUserDto)
+        public async Task<IActionResult> UpdateUser(string id, [FromBody] CreateUserDto updateUserDto)
         {
             var user = await _context.Users.FindAsync(id);
             if (user == null)
@@ -128,7 +128,7 @@ namespace ElectronicHealthRecord.Controllers
 
         // DELETE: api/User/{id}
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUser(int id)
+        public async Task<IActionResult> DeleteUser(string id)
         {
             var user = await _context.Users.FindAsync(id);
 

@@ -8,6 +8,6 @@
         public DateTime Date { get; set; }
         public string Attachments { get; set; } = null!;
         public int FolderId { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; } = null!;
     }
 }

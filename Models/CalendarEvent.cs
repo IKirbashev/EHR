@@ -4,11 +4,11 @@
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }
-        public string Description { get; set; }
-        public string EventType { get; set; }
+        public string Description { get; set; } = null!;
+        public string EventType { get; set; } = null!;
 
-        // Связь
-        public int UserId { get; set; }
-        public User User { get; set; }
+        // Relationship
+        public string UserId { get; set; } = null!;
+        public User User { get; set; } = null!;
     }
 }

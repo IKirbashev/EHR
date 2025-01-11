@@ -3,16 +3,16 @@
     public class DiaryEntry
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Text { get; set; }
+        public string Title { get; set; } = null!;
+        public string Text { get; set; } = null!;
         public DateTime Date { get; set; }
-        public string Attachments { get; set; } // Список путей к файлам или ссылки
+        public string Attachments { get; set; } = null!; // List of file paths or URLs
 
-        // Связи
+        // Relationships
         public int FolderId { get; set; }
-        public Folder Folder { get; set; }
+        public Folder Folder { get; set; } = null!;
 
-        public int UserId { get; set; }
-        public User User { get; set; }
+        public string UserId { get; set; } = null!;
+        public User User { get; set; } = null!;
     }
 }

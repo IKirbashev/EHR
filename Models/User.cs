@@ -1,15 +1,14 @@
-﻿namespace ElectronicHealthRecord.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace ElectronicHealthRecord.Models
 {
-    public class User
+    public class User : IdentityUser
     {
-        public int Id { get; set; }
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
         public DateTime DateOfBirth { get; set; }
-        public string Email { get; set; } = null!;
-        public string PasswordHash { get; set; } = null!;
 
-        // Связи
+        // Relationships
         public ICollection<Biomarker> Biomarkers { get; set; } = new List<Biomarker>();
         public ICollection<Medication> Medications { get; set; } = new List<Medication>();
         public ICollection<CalendarEvent> CalendarEvents { get; set; } = new List<CalendarEvent>();
